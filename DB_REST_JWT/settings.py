@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-import django_on_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -68,14 +67,16 @@ WSGI_APPLICATION = 'DB_REST_JWT.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASE = "simpledbmamager"
+
+
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': "database1",
         'USER': "s-admin",
         'PASSWORD': "1234",
-        'HOST': 'postgrats',
+        'HOST': 'localhost',
         'PORT': 5432,
     }
 }
@@ -134,5 +135,3 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 100
 }
-
-django_on_heroku.settings(locals())
