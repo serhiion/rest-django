@@ -72,7 +72,7 @@ WSGI_APPLICATION = 'DB_REST_JWT.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgesql_psycopg2-binary',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': "d95tu7jt9q20gq",
         'USER': "xivtiqdjoynahw",
         'PASSWORD': "f85fbdb1befb29eafa88b21444a7a033207bc46aa8b206a6064e12f59c040a14",
